@@ -33,7 +33,7 @@ cd ecommerce-microservices
 Run the following inside each microservice directory:
 
 bash
-Copy
+
 cd user-service && npm install
 cd ../product-service && npm install
 cd ../order-service && npm install
@@ -45,19 +45,19 @@ Create a .env file inside each microservice and add the following:
 
 🔹 User Service (user-service/.env)
 makefile
-Copy
+
 MONGO_URI=mongodb://localhost:27017/userdb
 JWT_SECRET=your_secret_key
 PORT=5001
 
 🔹 Product Service (product-service/.env)
 bash
-Copy
+
 MONGO_URI=mongodb://localhost:27017/productdb
 PORT=5002
 🔹 Order Service (order-service/.env)
 makefile
-Copy
+
 MONGO_URI=mongodb://localhost:27017/orderdb
 PORT=5003
 JWT_SECRET=your_secret_key
@@ -68,17 +68,17 @@ Open three terminal windows and run:
 
 🔹 Start User Service
 bash
-Copy
+
 cd user-service
 npx nodemon server.js
 🔹 Start Product Service
 bash
-Copy
+
 cd product-service
 npx nodemon server.js
 🔹 Start Order Service
 bash
-Copy
+
 cd order-service
 npx nodemon server.js
 📌 API Endpoints
@@ -90,11 +90,11 @@ GET	/profile	Get user profile	✅
 Example Requests
 🔹 Register User
 http
-Copy
+
 POST http://localhost:5001/api/users/register
 Content-Type: application/json
 json
-Copy
+
 {
   "name": "John Doe",
   "email": "john@example.com",
@@ -102,11 +102,11 @@ Copy
 }
 🔹 Login User
 http
-Copy
+
 POST http://localhost:5001/api/users/login
 Content-Type: application/json
 json
-Copy
+
 {
   "email": "john@example.com",
   "password": "123456"
