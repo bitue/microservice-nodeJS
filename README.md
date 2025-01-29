@@ -60,7 +60,7 @@ makefile
 
 MONGO_URI=mongodb://localhost:27017/orderdb
 PORT=5003
-JWT_SECRET=your_secret_key
+JWT_SECRET=your_secret_key(must be same key )
 
 
 4️⃣ Start the Services
